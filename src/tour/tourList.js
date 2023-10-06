@@ -27,7 +27,7 @@ const TourList = () => {
             // 에러가 있다면 catch값으로 넘어감 */
       try {
         const response = await axios.get(
-          `http://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=4&pageNo=1&resultType=json`
+          `https://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=4&pageNo=1&resultType=json`
                                                                                             /* page앞에 숫자:웹에 보여지는 아이템갯수 ex)20=>20개 보여짐
                                                                                                No옆에 숫자: 페이지 번호 ex)5번 페이지 아이템들 보여줌*/
         );
