@@ -6,7 +6,7 @@ const TourItem = ({ article }) => {
     TITLE /* 제목 */,
     SUBTITLE, /* 부제목 */
     GUGUN_NM /* 구군 */,
-    MAIN_IMG_NORMAL /* 이미URL */,
+    MAIN_IMG_NORMAL /* 이미지URL */,
     ADDR1 /* 주소 */
   } = article;
   return (

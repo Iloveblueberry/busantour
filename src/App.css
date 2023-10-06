@@ -42,6 +42,22 @@ body {
   margin: 0 auto;
 }
 
+#wrap {
+  position: relative;
+}
+
+#wrap.on::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+
+
 header {
   width: 100%;
   height: 60px;
@@ -78,13 +94,13 @@ header > img {
 
 header .gnb {
   max-width: 767px;
-  width: 50%;
-  height: 60vh;
+  width: 70%;
+  height: 100vh;
   background-color: #fff;
   position: fixed;
   top: 0;
   left: -100%;
-  z-index: 99999;
+  z-index: 9;
   text-align: center;
   padding: 50px 0;
   font-family: 'Dovemayo_gothic';
@@ -103,12 +119,13 @@ header .gnb .close > img {
 
 header .gnb .depth01 > a {
   width: 100%;
-  background-color:#507fff;
-  color: #fff;
-  padding: 10px 0;
+  background-color:#c5daee;
+  /* color: #fff; */
+  padding: 15px 0;
   border-bottom: 1px solid #fff;
   display: block;
-  font-size: 19px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 header .gnb .depth01 .depth02 {
@@ -117,9 +134,9 @@ header .gnb .depth01 .depth02 {
 }
 
 header .gnb .depth01 .depth02 li {
-  padding: 5px 0;
-  background-color: #cbe3ff;
-  border-bottom: 1px dotted #fff;
+  padding: 10px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #555;
   font-size: 17px;
 }
 
@@ -138,6 +155,7 @@ header .gnb .search a img {
 header .gnb .search input[type="text"] {
   width: 80%;
   padding: 5px;
+  border: 2px solid #333;
 }
 
 header .gnb .logo {
@@ -313,7 +331,7 @@ header .gnb .logo img {
   max-width: 767px;
   width: 100%;
   position: fixed;
-  bottom: 56px;
+  bottom: 0;
   background-color: #fff;
   z-index: 99;
 }
@@ -325,7 +343,7 @@ header .gnb .logo img {
 .bottom_nav ul li{
   width: calc(100% / 4);
   text-align: center;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 
