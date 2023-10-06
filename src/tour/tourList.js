@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { useState, useEffect } from "react";
 /* useEffect=> 비동기 가능
-   동기:순차적으로 값을 진행
+   동기:순적으로 값을 진행
    비동기:순차적x, 동시에 가능
    ex)키오스크 주문 동시에 여러개 가능 */
 import TourItem from "./tourItem";
@@ -27,7 +27,7 @@ const TourList = () => {
             // 에러가 있다면 catch값으로 넘어감 */
       try {
         const response = await axios.get(
-          `https://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=4&pageNo=1&resultType=json`
+          `http://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=4&pageNo=1&resultType=json`
                                                                                             /* page앞에 숫자:웹에 보여지는 아이템갯수 ex)20=>20개 보여짐
                                                                                                No옆에 숫자: 페이지 번호 ex)5번 페이지 아이템들 보여줌*/
         );

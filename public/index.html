@@ -9,7 +9,40 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- 🎈script -->
+    <script src="lib/jquery-3.7.0.min.js"></script>
+
+    <script>
+      $(function (){
+        $('header > img').click(function(){
+          $('header .gnb').animate({
+            'left':'0'
+          })
+          $('#wrap').addClass('on')
+        })
+
+        $('header .gnb .close').click(function(){
+          $('header .gnb').animate({
+            'left':'-100%'
+          })
+          $('#wrap').removeClass('on')
+        })
+
+        $('header .gnb .depth01 > a').click(function(){
+                if($(this).next().css('display') == 'none') {
+                    $('.gnb .depth02').slideUp()
+                    $(this).next().slideDown()
+                } else {
+                    $('.gnb .depth02').slideUp()
+                }
+            })
+
+
+
+      })// script end
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,29 +61,93 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <header>
-      <h1><img src="img/작은갈매기로고4.png"></h1>
-      <img src="img/menu.png" alt="메뉴">
-    </header>
-       <div class="nav">
+    <div id="wrap">
+      <header>
+        <h1><img src="img/작은갈매기로고4.png"></h1>
+        <img src="img/menu.png" alt="메뉴아이콘"/>
+
+        <!-- 🎈메뉴 gnb -->
+        <div class="gnb">
+          <div class="close">
+            <img src="img/icons8-닫기_블랙-24.png" alt=""/>
+          </div><!-- .close end -->
+          <ul>
+            <li class="depth01">
+              <a href="#">테마</a>
+              <ul class="depth02">
+                <li><a href="#">#힐링</a></li>
+                <li><a href="#">#역사탐방</a></li>
+                <li><a href="#">#맛집투어</a></li>
+              </ul><!-- .depth02 end -->
+            </li><!-- .depth01 end -->
+
+            <li class="depth01">
+              <a href="#">여행정보</a>
+              <ul class="depth02">
+                <li><a href="#">#추천맛집</a></li>
+                <li><a href="#">#액티비티</a></li>
+              </ul><!-- .depth02 end -->
+
+            </li><!-- .depth01 end -->
+            <li class="depth01">
+              <a href="#">여행지도</a>
+            </li><!-- .depth01 end -->
+
+            <li class="depth01">
+              <a href="#">이벤트</a>
+            </li><!-- .depth01 end -->
+          </ul>
+
+          <div class="search">
+            <input type="text" placeholder="궁금한것 물어보세요!">
+            <a href="#"><img src="img/icons8-search-40.png"></a>
+          </div><!-- .search end -->
+
+          <div class="logo">
+            <img src="img/메뉴갈메기로고2.png" alt="로고">
+          </div><!-- /logo end -->
+        </div><!-- .gnb end -->
+
+      </header>
+
+        <div class="nav">
+          <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">테마</a></li>
+            <li><a href="#">여행정보</a></li>
+            <li><a href="#">여행지도</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .nav end -->
+        <div class="main_visual">
+          <img src="img/불꽃축제.png" alt="불꽃축제"/>
+          <div class="text">
+            <h3>제 18회 부산 불꽃축제</h3>
+            <strong>2023.11.04</strong>
+            <p><a href="#">자세히보기</a></p>
+          </div>  <!-- .text end -->
+        </div> <!-- .main_visual end -->
+      <div id="root">
+      </div><!-- .root end -->
+
+      <div class="bottom_nav">
         <ul>
-          <li><a href="#">홈</a></li>
-          <li><a href="#">테마</a></li>
-          <li><a href="#">여행정보</a></li>
-          <li><a href="#">여행지도</a></li>
-          <li><a href="#">이벤트</a></li>
+          <li><a href="#"><img src="img/icons8-home-40.png" alt="홈"></a></li>
+          <li><a href="#"><img src="img/icons8-search-40.png" alt="검색"></a></li>
+          <li><a href="#"><img src="img/icons8-map-40.png" alt="지도"></a></li>
+          <li><a href="#"><img src="img/icons8-user-40.png" alt="로그인"></a></li>
         </ul>
-      </div><!-- .nav end -->
-    <div id="root">
-    </div>
-    <footer>
-      <ul>
-        <li><a href="#">명소</a></li>
-        <li><a href="#">홈</a></li>
-        <li><a href="#">메모장</a></li>
-        <li><a href="#">깃허브</a></li>
-      </ul>
-    </footer>
+      </div><!-- .bottom_nav end -->
+
+      <!-- <footer>
+        <ul>
+          <li><a href="#">명소</a></li>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">메모장</a></li>
+          <li><a href="#">깃허브</a></li>
+        </ul>
+      </footer> -->
+    </div><!-- 🎈#wrap end -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
