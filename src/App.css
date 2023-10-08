@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'CookieRun-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
@@ -12,12 +6,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Dovemayo_gothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
 
 * {
   margin: 0;
@@ -62,7 +50,7 @@ header {
   width: 100%;
   height: 60px;
   justify-content: space-between;
-  background-color: #c5daee;
+  background-color: #c5ddee;
   display: flex;
   align-items: center;
   position: relative;
@@ -90,7 +78,7 @@ header > img {
 }
 
 
-/* 🎈메뉴 */
+/* 🎈메뉴_gnb */
 
 header .gnb {
   max-width: 767px;
@@ -103,7 +91,6 @@ header .gnb {
   z-index: 9;
   text-align: center;
   padding: 50px 0;
-  font-family: 'Dovemayo_gothic';
 }
 
 header .gnb .close {
@@ -119,8 +106,8 @@ header .gnb .close > img {
 
 header .gnb .depth01 > a {
   width: 100%;
-  background-color:#c5daee;
-  /* color: #fff; */
+  background-color:#5aafff;
+  color: #fff;
   padding: 15px 0;
   border-bottom: 1px solid #fff;
   display: block;
@@ -152,7 +139,7 @@ header .gnb .search a img {
   height: 30px;
   padding-left: 5px;
 }
-header .gnb .search input {
+header .gnb .search input[type="text"] {
   width: 80%;
   padding: 5px;
   border: 2px solid #333;
@@ -201,9 +188,8 @@ header .gnb .logo img {
 }
 
 .main_visual .text h3 {
-  font-family: 'CookieRun-Regular';
+  font-family: 'GangwonEduPowerExtraBoldA';
   font-size: 45px;
-  font-weight: normal;
   margin-bottom: 10px;
 }
 
@@ -306,7 +292,6 @@ header .gnb .logo img {
 
 
 .item .info .image .img_text h2 {
-  font-family: 'Dovemayo_gothic';
   font-size: 18px;
   font-weight: normal;
 }
@@ -326,8 +311,8 @@ header .gnb .logo img {
   border: 1px solid #333;
 }
 
-/* 🎈bottom_nav */
-.bottom_nav {
+/* 🎈footer */
+footer {
   max-width: 767px;
   width: 100%;
   position: fixed;
@@ -336,37 +321,20 @@ header .gnb .logo img {
   z-index: 99;
 }
 
-.bottom_nav ul {
+footer ul {
   display: flex;
 }
 
-.bottom_nav ul li{
+footer ul li{
   width: calc(100% / 4);
   text-align: center;
   padding: 10px 0;
 }
 
-
-/* 🎈footer */
-footer {
-  max-width: 767px;
-  width: 100%;
-  padding: 20px 0;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  background-color: #fff;
+footer ul li img {
+  height: 30px;
 }
 
-footer ul {
-  display: flex;
-}
-
-footer ul li {
-  width: calc(100% / 4);
-  text-align: center;
-}
 
 
 @media screen and (max-width:550px) {
